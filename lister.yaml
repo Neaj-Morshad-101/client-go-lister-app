@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: lister-app
+  name: lister-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lister-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: lister-app
+    spec:
+      containers:
+      - image: neajmorshad/client-go-lister-app:0.1.1
+        name: client-go-lister-app
+        resources: {}
+status: {}
